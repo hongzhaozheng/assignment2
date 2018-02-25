@@ -53,6 +53,7 @@ for i=1:W
 end
 figure(2);
 mesh(Emap);
+title('V(x,y) using FD method');
 
 % Analytical Solution
 N=300;
@@ -67,6 +68,7 @@ for n = 1:2:N
     Vp =(4*V0/pi)*(1/n)*(cosh(n*pi*xx/a)/cosh(n*pi*b/a)).*(sin(n*pi*yy/a));   
     Vas =Vas + Vp ;
     mesh(Vas);
+    title('V(x,y) using Analytical Solution method');
     % pause(0.01);
 end
 
